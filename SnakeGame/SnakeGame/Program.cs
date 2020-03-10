@@ -21,6 +21,11 @@ namespace SnakeGame
             VerticalLine rLine = new VerticalLine(0, 24, 78, '.');
             rLine.Draw();
 
+            //создание змейкиs
+            Point p = new Point(4, 5,'+');
+            Snake snake = new Snake(p, 5, Direction.RIGHT);
+            snake.Draw();
+
             Console.ReadLine();
             
         }
