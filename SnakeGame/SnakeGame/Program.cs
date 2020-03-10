@@ -26,18 +26,21 @@ namespace SnakeGame
             Point p = new Point(4, 5,'+');
             Snake snake = new Snake(p, 5, Direction.RIGHT);
             snake.Draw();
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-           
 
-            Console.ReadLine();
+            
+
+            //движение змейки
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.Handlekey(key.Key);
+                }
+                Thread.Sleep(150);
+                snake.Move();
+            }
+           
             
         }
 
