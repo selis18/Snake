@@ -8,13 +8,18 @@ namespace SnakeGame
         static void Main(string[] args)
         {
 
+            Console.SetWindowSize(80, 25);
             Console.SetBufferSize(80, 25);
 
-            HorizontalLine line = new HorizontalLine(5,10,8,'.');
-            line.Draw();
-
-            VerticalLine vLine = new VerticalLine(7, 15, 6, '+');
-            vLine.Draw();
+            //отрисовка рамки
+            HorizontalLine upLine = new HorizontalLine(0,78,0,'.');
+            upLine.Draw();
+            HorizontalLine dLine = new HorizontalLine(0, 78, 24, '.');
+            dLine.Draw();
+            VerticalLine lLine = new VerticalLine(0, 24, 0, '.');
+            lLine.Draw();
+            VerticalLine rLine = new VerticalLine(0, 24, 78, '.');
+            rLine.Draw();
 
             Console.ReadLine();
             
